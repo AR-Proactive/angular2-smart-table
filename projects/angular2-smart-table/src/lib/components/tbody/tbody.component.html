@@ -31,7 +31,7 @@
     <td *ngIf="row.isInEditing && showActionColumnLeft"  class="angular2-smart-actions">
       <angular2-st-tbody-create-cancel [grid]="grid" [row]="row" [editConfirm]="editConfirm" [editCancel]="editCancel"></angular2-st-tbody-create-cancel>
     </td>
-    <td *ngFor="let cell of getVisibleCells(row.cells)">
+    <td *ngFor="let cell of getVisibleCells(row.cells)" class="{{cell.getColumn().classContent ?? ''}}">
       <angular2-smart-table-cell [cell]="cell"
                             [grid]="grid"
                             [row]="row"
